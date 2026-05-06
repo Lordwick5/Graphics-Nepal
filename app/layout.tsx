@@ -24,10 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      {" "}
-      //antialiased means to make text look smoother on screen
       <body className="min-h-full flex flex-col">
-        //navbar goes here because we want it in every page.
         <nav className="flex justify-between items-center px-10 py-4 bg-[#0a1628]">
           <a href="/" className="text-[#c9a84c] text-xl font-bold">
             Graphics Nepal
