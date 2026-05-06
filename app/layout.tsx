@@ -28,13 +28,23 @@ export default function RootLayout({
       //antialiased means to make text look smoother on screen
       <body className="min-h-full flex flex-col">
         //navbar goes here because we want it in every page.
-        <nav>
-          <a href="/">Graphics Nepal</a>
-          <div>
-            <a href="/">Home</a>
-            <a href="/products">Products</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+        <nav className="flex justify-between items-center px-10 py-4 bg-[#0a1628]">
+          <a href="/" className="text-[#c9a84c] text-xl font-bold">
+            Graphics Nepal
+          </a>
+          <div className="flex gap-8">
+            <a href="/" className="text-slate-300 hover:text-[#c9a84c]">
+              Home
+            </a>
+            <a href="/products" className="text-slate-300 hover:text-[#c9a84c]">
+              Products
+            </a>
+            <a href="/about" className="text-slate-300 hover:text-[#c9a84c]">
+              About
+            </a>
+            <a href="/contact" className="text-slate-300 hover:text-[#c9a84c]">
+              Contact
+            </a>
           </div>
         </nav>
         {children}
