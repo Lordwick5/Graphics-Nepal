@@ -73,7 +73,7 @@ const products = [
 
 export default function Products() {
   return (
-    <main className="bg-[#0a1268] max-w-5xl mx-auto px-6 py-16">
+    <main className="bg-[#0a1268] max-w-5xl mx-auto px-0 py-16">
       {/* Page Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-[#0a1628] mb-3">Our Products & Services</h1>
@@ -81,23 +81,25 @@ export default function Products() {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {products.map((product) => (
-          <div key={product.id} className="border border-slate-200 rounded-xl p-6 bg-white">
-            <span className="text-4xl">{product.emoji}</span>
-            <h3 className="font-semibold text-[#0a1628] text-lg mt-4 mb-1">{product.name}</h3>
-            <p className="text-slate-500 text-sm mb-4">{product.desc}</p>
-            <div className="flex justify-between items-center">
-              {/* <span className="text-[#c9a84c] font-semibold">{product.price}</span> */}
-              <a
-                href="/contact"
-                className="bg-[#0a1628] text-[#c9a84c] text-sm px-4 py-2 rounded-lg"
-              >
-                Order now
-              </a>
+      <div className="max-w-5xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <div key={product.id} className="border border-slate-200 rounded-xl p-6 bg-white">
+              <span className="text-4xl">{product.emoji}</span>
+              <h3 className="font-semibold text-[#0a1628] text-lg mt-4 mb-1">{product.name}</h3>
+              <p className="text-slate-500 text-sm mb-4">{product.desc}</p>
+              <div className="flex justify-between items-center">
+                {/* <span className="text-[#c9a84c] font-semibold">{product.price}</span> */}
+                <a
+                  href="/contact"
+                  className="bg-[#0a1628] text-[#c9a84c] text-sm px-4 py-2 rounded-lg"
+                >
+                  Order now
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </main>
   );
