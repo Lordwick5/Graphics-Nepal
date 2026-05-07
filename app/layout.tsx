@@ -45,7 +45,7 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
-        <footer className="bg-[#0a1628] text-slate-400 text-center py-6 text-sm mt-auto">
+        <footer className="bg-[#0a1628] text-slate-400 text-center text-sm mt-auto footer">
           <p>© 2026 Graphics Nepal · Trusted since 2000 · Tripureshwor, Kathmandu, Nepal</p>
         </footer>
       </body>
