@@ -77,7 +77,7 @@ export default function Products() {
       {/* Page Header */}
       <div className="bg-[#0a1628] py-16 px-6 text-center">
         <h1 className="text-4xl font-bold text-white mb-3">Our Products & Services</h1>
-        <p className="text-slate-500 text-lg">Everything your business needs to look its best</p>
+        <p className="text-slate-400 text-lg">Everything your business needs to look its best</p>
       </div>
 
       {/* Products Grid */}
