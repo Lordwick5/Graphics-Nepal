@@ -73,7 +73,7 @@ const products = [
 
 export default function Products() {
   return (
-    <main className="max-w-5xl mx-auto px-6 py-16">
+    <main className="bg-[#0a1268] max-w-5xl mx-auto px-6 py-16">
       {/* Page Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-[#0a1628] mb-3">Our Products & Services</h1>
