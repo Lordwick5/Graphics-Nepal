@@ -17,24 +17,26 @@ export async function POST(request: NextRequest) {
   const { error: dbError } = await supabase.from("contacts").insert([{ name, email, message }]);
 
   if (dbError) {
+    console.log("Supabase error:", dbError);
     return NextResponse.json({ error: "Failed to save message" }, { status: 500 });
   }
 
-  // Send email notification
+  // Send email
   const { error: emailError } = await resend.emails.send({
-    from: "Graphics Nepal <onboarding@resend.dev>",
+    from: "Graphics Nepal <noreply@graphicsnepal.com.np>",
     to: "Graphics4kprint@gmail.com",
     subject: `New message from ${name}`,
     html: `
-      <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Message:</strong></p>
-      <p>${message}</p>
-    `,
+    <h2>New Contact Form Submission</h2>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Message:</strong></p>
+    <p>${message}</p>
+  `,
   });
 
   if (emailError) {
+    console.log("Resend error:", emailError);
     return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
   }
 
