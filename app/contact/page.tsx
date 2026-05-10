@@ -114,7 +114,9 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label className="text-sm font-medium text-[#0a1628] block mb-1">Email address</label>
+            <label className="text-sm font-medium text-[#0a1628] block mb-1">
+              Email address or Phone Number
+            </label>
             <input
               type="email"
               placeholder="e.g. ram@gmail.com"
