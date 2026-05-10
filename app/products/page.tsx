@@ -96,7 +96,7 @@ export default function Products() {
           {products.map((product) => (
             <div
               key={product.id}
-              className="border border-slate-200 rounded-xl overflow-hidden bg-white"
+              className="border-2 border-slate-300 rounded-xl overflow-hidden bg-white"
             >
               <Image
                 src={product.image}
