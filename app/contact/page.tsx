@@ -17,7 +17,10 @@ export default function Contact() {
               <span className="text-2xl">📍</span>
               <div>
                 <p className="font-medium text-[#0a1628]">Address</p>
-                <p className="text-slate-500 text-sm">Kathmandu, Nepal</p>
+                <p className="text-slate-500 text-sm">
+                  Kathmandu, Nepal <br />
+                  Google Search: Graphics Nepal
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -38,7 +41,8 @@ export default function Contact() {
               <span className="text-2xl">🕐</span>
               <div>
                 <p className="font-medium text-[#0a1628]">Opening Hours</p>
-                <p className="text-slate-500 text-sm">Sun-Fri: 9am - 8pm</p>
+                <p className="text-slate-500 text-sm">Sun-Fri: 9am - 8pm (Summer)</p>
+                <p className="text-slate-500 text-sm">Sun-Fri: 9am - 7pm (Winter)</p>
               </div>
             </div>
           </div>
