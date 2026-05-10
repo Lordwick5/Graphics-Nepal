@@ -3,7 +3,7 @@ export default function About() {
     <main className="max-w-4xl mx-auto px-6 py-16">
       {/* Page Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-[#c9a84c] mb-3">About Graphics Nepal</h1>
+        <h1 className="text-4xl font-bold text-[#0a1628] mb-3">About Graphics Nepal</h1>
         <p className="text-slate-500 text-lg">A legacy built on trust, quality, and honesty</p>
       </div>
 
