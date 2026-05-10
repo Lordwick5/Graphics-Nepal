@@ -11,9 +11,9 @@ export default function About() {
       <div className="mb-12">
         <h2 className="text-2xl font-semibold text-[#c9a84c] mb-4">Our Story</h2>
         <p className="text-slate-600 leading-relaxed mb-4">
-          Graphics Nepal (previously named as Nepal Art) was founded over 20 years ago with a simple
-          mission - to provide honest, high-quality printing and graphic design services to the
-          people of Nepal.
+          Graphics Nepal (previously named <strong>Nepal Art</strong>) was founded over 20 years ago
+          with a simple mission - to provide honest, high-quality printing and graphic design
+          services to the people of Nepal.
         </p>
         <p className="text-slate-600 leading-relaxed">
           What started as a small shop has grown into a trusted name that thousands of businesses
