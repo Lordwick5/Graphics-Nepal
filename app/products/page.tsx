@@ -11,7 +11,7 @@ const products = [
   {
     id: 2,
     name: "Self-ink Stamp",
-    image: "/stamp_self ink.jpg",
+    image: "/stamp_self_ink.jpg",
     desc: "Customizable Self-Ink Stamp in Square, Rectangle or Circle",
     emoji: "🪪",
   },
