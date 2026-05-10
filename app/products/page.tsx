@@ -6,91 +6,78 @@ const products = [
     name: "Business Cards",
     image: "/visiting_card.jpg",
     desc: "Premium matte & glossy finish",
-    emoji: "🪪",
   },
   {
     id: 2,
     name: "Self-ink Stamp",
     image: "/stamp_self_ink.jpg",
     desc: "Customizable Self-Ink Stamp in Square, Rectangle or Circle",
-    emoji: "🪪",
   },
   {
     id: 3,
     name: "Flex/Banner Print",
     image: "/flex_print.jpg",
     desc: "Custom Banner Print for Business/Personal use",
-    emoji: "🪪",
   },
   {
     id: 4,
     name: "Vinyl Sticker",
     image: "/vinyl_sticker.jpg",
     desc: "Vinyl Sticker available for various purposes",
-    emoji: "🪪",
   },
   {
     id: 5,
     name: "Id card & Stripe print",
     image: "/idcard.jpg",
     desc: "High Quality Strap and Id card print for Business/College/School",
-    emoji: "🪪",
   },
   {
     id: 6,
     name: "Certificate print",
     image: "/certificate.jpg",
     desc: "Customizable Certificate print for any event for Business/College/School",
-    emoji: "🪪",
   },
   {
     id: 7,
     name: "Number plate",
     image: "/number_plate.jpg",
     desc: "Fined by Police for not having a good number plate? Restore your Number plate in just minutes.",
-    emoji: "🪪",
   },
   {
     id: 8,
     name: "Diamond Stamp",
     image: "/diamond_stamp.jpg",
     desc: "Give your office that premium look with this stamp",
-    emoji: "🪪",
   },
   {
     id: 9,
     name: "Bunting Pipe",
     image: "/PVCPIPEA-1-2500x2500.jpg",
     desc: "Need to hang your banner on the wall? Our multipurpose bunting pipe can help you",
-    emoji: "🪪",
   },
   {
     id: 10,
     name: "X-stand",
     image: "/xstand_banner.jpg",
     desc: "Keep your event stylish and fashionable with our X-STAND. Reusable and easy to use",
-    emoji: "🪪",
   },
   {
     id: 11,
     name: "Pocket Stamp",
     image: "/pocket_stamp.jpg",
     desc: "Handy and easy to carry. Pocket stamp can literally fit in your pockets.",
-    emoji: "🪪",
   },
   {
     id: 12,
     name: "Forex Board",
     image: "/Forex_board.jpg",
     desc: "A board which when styled with vinyl stickers; looks attractive and premium",
-    emoji: "🪪",
   },
   {
     id: 13,
     name: "Award & medals",
     image: "/award.jpg",
     desc: "Awards & medals for your special event",
-    emoji: "🪪",
   },
 ];
 
@@ -111,20 +98,13 @@ export default function Products() {
               key={product.id}
               className="border border-slate-200 rounded-xl overflow-hidden bg-white"
             >
-              {/* Image or Emoji fallback */}
-              {product.image ? (
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={400}
-                  height={200}
-                  className="w-full h-40 object-cover"
-                />
-              ) : (
-                <div className="w-full h-40 bg-slate-100 flex items-center justify-center text-4xl">
-                  {product.emoji}
-                </div>
-              )}
+              <Image
+                src={product.image}
+                alt={product.name}
+                width={400}
+                height={200}
+                className="w-full h-40 object-cover"
+              />
 
               {/* Card Content */}
               <div className="p-4">
