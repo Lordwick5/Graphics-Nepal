@@ -2,6 +2,7 @@ const products = [
   {
     id: 1,
     name: "Business Cards",
+    image: "/public/visiting ",
     desc: "Premium matte & glossy finish",
     // price: "From Rs. 1000",
     emoji: "🪪",
