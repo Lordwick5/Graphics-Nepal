@@ -156,16 +156,16 @@ export default function Products() {
           {products.map((product) => (
             <div
               key={product.id}
-              className="border-2 border-slate-300 rounded-xl overflow-hidden bg-white"
+              className="group border-2 border-slate-300 rounded-xl overflow-hidden bg-white"
             >
-              <div className="relative w-full h-48 bg-gray-100">
+              <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.name}
                   // width={400}
                   // height={200}
-                  fill // Use fill to make the image cover the parent div completely
-                  className="object-cover transition duration-500 group-hover:scale-105" 
+                  fill // fill to make the image cover the parent div completely
+                  className="object-cover transition duration-500 group-hover:scale-110" 
                   // className="w-full h-40 object-cover"
                 />
               </div>
