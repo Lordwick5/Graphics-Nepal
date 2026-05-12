@@ -171,7 +171,9 @@ export default function Products() {
                   // width={400}
                   // height={200}
                   fill // fill to make the image cover the parent div completely
-                  className="object-cover transition duration-500 group-hover:scale-110" 
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  loading={product.id === 1 ? "eager" : "lazy"}
+                  className="object-cover transition duration-500 group-hover:scale-110"
                   // className="w-full h-40 object-cover"
                 />
               </div>

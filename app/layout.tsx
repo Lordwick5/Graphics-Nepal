@@ -49,7 +49,7 @@ export default function RootLayout({
   
   {/* Social Media Icons */}
   <div className="flex justify-center gap-6 mb-4">
-    <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-[#c9a84c] transition">
+    <a href="https://www.facebook.com/profile.php?id=61589712207794" target="_blank" rel="noopener noreferrer" className="hover:text-[#c9a84c] transition">
       Facebook
     </a>
     <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-[#c9a84c] transition">
