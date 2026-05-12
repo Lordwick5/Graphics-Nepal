@@ -46,8 +46,23 @@ export default function RootLayout({
         </nav>
         {children}
         <footer className="bg-[#0a1628] text-slate-400 text-center text-sm mt-auto footer">
-          <p>© 2026 Graphics Nepal · Trusted since 2000 · Tripureshwor, Kathmandu, Nepal</p>
-        </footer>
+  
+  {/* Social Media Icons */}
+  <div className="flex justify-center gap-6 mb-4">
+    <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-[#c9a84c] transition">
+      Facebook
+    </a>
+    <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-[#c9a84c] transition">
+      Instagram
+    </a>
+    <a href="https://tiktok.com/@yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-[#c9a84c] transition">
+      TikTok
+    </a>
+  </div>
+
+  <p>© 2026 Graphics Nepal · Trusted since 2000 · Tripureshwor, Kathmandu, Nepal</p>
+
+</footer>
       </body>
     </html>
   );
