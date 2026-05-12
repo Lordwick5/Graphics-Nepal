@@ -135,6 +135,12 @@ const products = [
   },
   {
     id: 23,
+    name: "Ribbon Badge",
+    image: "/ribbon.jpg",
+    desc: "Durable, customized badges for professional identification, staff members, or event membership. Available in multiple materials and customizable with your logo.",
+  },
+  {
+    id: 24,
     name: "Photo Frame",
     image: "/photoframe.png",
     desc: "Capture and display your favorite moments in customized, elegant photo frames.",
