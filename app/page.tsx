@@ -40,7 +40,7 @@ export default function Home() {
             <span className="text-4xl">🏅</span>
             <h3 className="font-semibold text-[#0a1628] mt-4 mb-2">20+ Years Experience</h3>
             <p className="text-slate-500 text-sm">
-              Serving Nepal since 2004 with consistent quality.
+              Serving Nepal since 2000 with consistent quality.
             </p>
           </div>
 
