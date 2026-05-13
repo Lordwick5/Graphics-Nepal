@@ -33,7 +33,29 @@ export default function RootLayout({
           <a href="/" className="text-[#c9a84c] text-xl font-bold">
             Graphics Nepal
           </a>
-          <div className="flex gap-8">
+          {/* Desktop links */}
+          <div className="hidden md:flex gap-8">
+            <a href="/" className="text-slate-300 hover:text-[#c9a84c]">
+              Home
+            </a>
+            <a href="/products" className="text-slate-300 hover:text-[#c9a84c]">
+              Products
+            </a>
+            <a href="/about" className="text-slate-300 hover:text-[#c9a84c]">
+              About
+            </a>
+            <a href="/contact" className="text-slate-300 hover:text-[#c9a84c]">
+              Contact
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <button className="md:hidden text-slate-300 text-2xl" id="menu-btn">
+            ☰
+          </button>
+
+          {/* Mobile dropdown menu */}
+          <div className="hidden bg-[#0a1628] flex-col px-6 pb-4 gap-4" id="mobile-menu">
             <a href="/" className="text-slate-300 hover:text-[#c9a84c]">
               Home
             </a>
