@@ -55,15 +55,15 @@ export default function Home() {
           <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">
             <span className="text-4xl">🤝</span>
             <h3 className="font-semibold text-[#0a1628] mt-4 mb-2">Honest Pricing</h3>
-            <p className="text-slate-500 text-sm">
-              Transparent pricing with no hidden charges. Ever.
-            </p>
+            <p className="text-slate-500 text-sm">Transparent pricing with no hidden charges.</p>
           </div>
 
           <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">
             <span className="text-4xl">🚀</span>
             <h3 className="font-semibold text-[#0a1628] mt-4 mb-2">Fast Turnaround</h3>
-            <p className="text-slate-500 text-sm">We respect your deadlines and deliver on time.</p>
+            <p className="text-slate-500 text-sm">
+              We consistently deliver quality work within the agreed timeframe.
+            </p>
           </div>
         </div>
       </section>
