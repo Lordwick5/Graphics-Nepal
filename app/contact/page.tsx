@@ -128,18 +128,24 @@ export default function Contact() {
               className="w-full border border-slate-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-[#c9a84c] resize-none"
             />
           </div>
+          {/* attach a file */}
           <div>
             <label className="text-sm font-medium text-[#0a1628] block mb-1">
               Attach a file or photo (optional)
             </label>
-            <input
-              type="file"
-              title="Attach a file or photo"
-              accept="image/*,.pdf,.doc,.docx"
-              onChange={(e) => setFile(e.target.files?.[0] || null)}
-              className="w-full border border-slate-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-[#c9a84c] bg-white"
-            />
-            {file && <p className="text-slate-500 text-xs mt-1">✅ Selected: {file.name}</p>}
+            <label className="w-full border border-slate-200 rounded-lg px-4 py-3 text-sm bg-white flex items-center gap-3 cursor-pointer hover:border-[#c9a84c]">
+              <span className="bg-slate-100 border border-slate-300 rounded px-3 py-1 text-xs font-medium text-slate-600">
+                Choose File
+              </span>
+              <span className="text-slate-400">{file ? file.name : "No file chosen"}</span>
+              <input
+                type="file"
+                title="Attach a file or photo"
+                accept="image/*,.pdf,.doc,.docx"
+                onChange={(e) => setFile(e.target.files?.[0] || null)}
+                className="hidden"
+              />
+            </label>
           </div>
 
           <button
