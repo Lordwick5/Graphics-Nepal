@@ -9,6 +9,17 @@ html {
   --foreground: #171717;
 }
 
+input,
+textarea {
+  background-color: white;
+  color: #1a1a2e;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
