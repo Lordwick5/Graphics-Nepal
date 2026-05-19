@@ -12,10 +12,6 @@ export async function POST(request: NextRequest) {
   const message = formData.get("message") as string;
   const file = formData.get("file") as File | null;
 
-  console.log("File received:", file);
-  console.log("File name:", file?.name);
-  console.log("File size:", file?.size);
-  console.log("File type:", file?.type);
   // Validate
   if (!name || !email || !message) {
     return NextResponse.json({ error: "All fields are required" }, { status: 400 });
@@ -30,19 +26,23 @@ export async function POST(request: NextRequest) {
   }
 
   // Prepare attachments if file exists
-  const attachments = [];
+  const attachments: { filename: string; content: string }[] = [];
   if (file && file.size > 0) {
     const fileBuffer = await file.arrayBuffer();
+    const base64Content = Buffer.from(fileBuffer).toString("base64");
+
+    console.log("Attachment prepared:", file.name, "base64 length:", base64Content.length);
+
     attachments.push({
       filename: file.name,
-      content: Buffer.from(fileBuffer),
+      content: base64Content,
     });
   }
 
   // Send email
   const { error: emailError } = await resend.emails.send({
     from: "Graphics Nepal <noreply@graphicsnepal.com.np>",
-    to: ["Graphics4kprint@gmail.com", "graphics.nepal2018@gmail.com"],
+    to: ["Graphics4kprint@gmail.com", "prashantchy96@gmail.com"],
     subject: `New message from ${name}`,
     html: `
       <h2>New Contact Form Submission</h2>
