@@ -5,10 +5,14 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
-  const body = await request.json();
-  const { name, email, message } = body;
+  const formData = await request.formData();
 
-  // Validate - make sure all fields are filled
+  const name = formData.get("name") as string;
+  const email = formData.get("email") as string;
+  const message = formData.get("message") as string;
+  const file = formData.get("file") as File | null;
+
+  // Validate
   if (!name || !email || !message) {
     return NextResponse.json({ error: "All fields are required" }, { status: 400 });
   }
@@ -21,18 +25,30 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Failed to save message" }, { status: 500 });
   }
 
+  // Prepare attachments if file exists
+  const attachments = [];
+  if (file && file.size > 0) {
+    const fileBuffer = await file.arrayBuffer();
+    attachments.push({
+      filename: file.name,
+      content: Buffer.from(fileBuffer),
+    });
+  }
+
   // Send email
   const { error: emailError } = await resend.emails.send({
     from: "Graphics Nepal <noreply@graphicsnepal.com.np>",
-    to: ["Graphics4kprint@gmail.com", "Prashantchy96@gmail.com"],
+    to: ["Graphics4kprint@gmail.com", "graphics.nepal2018@gmail.com"],
     subject: `New message from ${name}`,
     html: `
-    <h2>New Contact Form Submission</h2>
-    <p><strong>Name:</strong> ${name}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    <p><strong>Message:</strong></p>
-    <p>${message}</p>
-  `,
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email/Phone:</strong> ${email}</p>
+      <p><strong>Message:</strong></p>
+      <p>${message}</p>
+      ${file && file.size > 0 ? `<p><strong>Attachment:</strong> ${file.name}</p>` : ""}
+    `,
+    attachments: attachments,
   });
 
   if (emailError) {
