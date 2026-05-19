@@ -8,6 +8,7 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
+  const [file, setFile] = useState<File | null>(null);
 
   async function handleSubmit() {
     if (!name || !email || !message) {
@@ -127,6 +128,20 @@ export default function Contact() {
               className="w-full border border-slate-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-[#c9a84c] resize-none"
             />
           </div>
+          <div>
+            <label className="text-sm font-medium text-[#0a1628] block mb-1">
+              Attach a file or photo (optional)
+            </label>
+            <input
+              type="file"
+              title="Attach a file or photo"
+              accept="image/*,.pdf,.doc,.docx"
+              onChange={(e) => setFile(e.target.files?.[0] || null)}
+              className="w-full border border-slate-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-[#c9a84c] bg-white"
+            />
+            {file && <p className="text-slate-500 text-xs mt-1">✅ Selected: {file.name}</p>}
+          </div>
+
           <button
             onClick={handleSubmit}
             disabled={loading}
