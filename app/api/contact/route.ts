@@ -12,6 +12,10 @@ export async function POST(request: NextRequest) {
   const message = formData.get("message") as string;
   const file = formData.get("file") as File | null;
 
+  console.log("File received:", file);
+  console.log("File name:", file?.name);
+  console.log("File size:", file?.size);
+  console.log("File type:", file?.type);
   // Validate
   if (!name || !email || !message) {
     return NextResponse.json({ error: "All fields are required" }, { status: 400 });
