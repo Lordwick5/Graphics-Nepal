@@ -18,10 +18,17 @@ export default function Contact() {
 
     setLoading(true);
 
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
+    if (file) {
+      formData.append("file", file);
+    }
+
     const response = await fetch("/api/contact", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message }),
+      body: formData,
     });
 
     const data = await response.json();
@@ -31,6 +38,7 @@ export default function Contact() {
       setName("");
       setEmail("");
       setMessage("");
+      setFile(null);
     } else {
       setStatus("error");
     }
