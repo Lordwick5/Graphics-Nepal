@@ -23,7 +23,7 @@ export default function About() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-6-bg-[#0a1628] rounded-2xl p-10 text-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 rounded-2xl p-10 text-center">
         <div>
           <span className="text-4xl font-bold text-[#c9a84c] block">20+</span>
           <span className="text-slate-400 text-sm mt-1 block">Years in business</span>
