@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Graphics Nepal
+
+Marketing website for **Graphics Nepal** (formerly Nepal Art) — a Kathmandu-based printing & graphics business serving customers since 2000. Built with Next.js, it showcases the company's product catalog and provides a contact form that emails inquiries to the business and stores them in Supabase.
+
+## Features
+
+- **Home, About, Products, and Contact pages** built on the Next.js App Router
+- **Product catalog** of 24+ printing & graphics services (business cards, stamps, banners, ID cards, stickers, canvas prints, LED sign boards, and more)
+- **Contact form API** (`/api/contact`) that:
+  - Validates submissions and stores them in a Supabase `contacts` table
+  - Sends a notification email (with optional file attachment) via [Resend](https://resend.com)
+- SEO essentials: per-page metadata, `sitemap.ts`, `robots.ts`, and a web app `manifest.ts`
+- Responsive navbar with a mobile menu
+- Styled with Tailwind CSS v4
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, TypeScript)
+- [React 19](https://react.dev)
+- [Tailwind CSS 4](https://tailwindcss.com)
+- [Supabase](https://supabase.com) — stores contact form submissions
+- [Resend](https://resend.com) — transactional email delivery
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+
+- A [Supabase](https://supabase.com) project with a `contacts` table (`name`, `email`, `message` columns)
+- A [Resend](https://resend.com) API key with a verified sending domain
+
+### Setup
+
+1. Clone the repository and install dependencies:
+
+   ```bash
+   git clone https://github.com/Lordwick5/Graphics-Nepal.git
+   cd Graphics-Nepal
+   npm install
+   ```
+
+2. Create a `.env.local` file in the project root with the following variables:
+
+   ```bash
+   NEXT_PUBLIC_SUPABASE_URL=your-supabase-project-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+   RESEND_API_KEY=your-resend-api-key
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## Available Scripts
+
+| Script          | Description                        |
+| --------------- | ----------------------------------- |
+| `npm run dev`   | Start the local development server |
+| `npm run build` | Build the app for production       |
+| `npm run start` | Run the production build           |
+| `npm run lint`  | Lint the codebase with ESLint      |
+
+## Project Structure
+
+```
+app/
+├── page.tsx           # Home page
+├── about/              # About page
+├── products/           # Product catalog page
+├── contact/            # Contact form page
+├── api/contact/        # Contact form API route (Supabase + Resend)
+├── sitemap.ts          # Dynamic sitemap
+├── robots.ts           # Robots.txt config
+└── manifest.ts         # Web app manifest
+components/
+└── navbar.tsx           # Site navigation
+lib/
+└── supabase.ts          # Supabase client
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The easiest way to deploy this app is with [Vercel](https://vercel.com/new), the platform built by the creators of Next.js. Make sure to configure the environment variables listed above in your deployment settings.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is privately maintained for Graphics Nepal. All rights reserved.
