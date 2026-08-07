@@ -1,4 +1,12 @@
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Products & Services",
+  description:
+    "Browse 24+ printing & graphics products from Graphics Nepal: business cards, banners, stamps, ID cards, stickers, canvas prints, LED sign boards, and more.",
+  alternates: { canonical: "/products" },
+};
 
 const products = [
   {
@@ -167,7 +175,7 @@ export default function Products() {
               <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
                 <Image
                   src={product.image}
-                  alt={product.name}
+                  alt={`${product.name} - Graphics Nepal, Kathmandu`}
                   // width={400}
                   // height={200}
                   fill // fill to make the image cover the parent div completely

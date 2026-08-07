@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Graphics Nepal (formerly Nepal Art) has served Kathmandu since 2000 with honest pricing and quality printing & graphic design. Read our story.",
+  alternates: { canonical: "/about" },
+};
+
 export default function About() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-16">
@@ -17,7 +26,7 @@ export default function About() {
         </p>
         <p className="text-slate-600 leading-relaxed">
           What started as a small shop has grown into a trusted name that thousands of businesses
-          and individuals rely on. We believe great design shouldn't cost a fortune, and quality
+          and individuals rely on. We believe great design shouldn&apos;t cost a fortune, and quality
           should never be compromised.
         </p>
       </div>
