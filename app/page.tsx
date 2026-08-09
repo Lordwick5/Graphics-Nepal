@@ -10,8 +10,8 @@ export default function Home() {
         <h1 className="text-5xl font-bold mt-6 mb-4">Graphics Nepal</h1>
 
         <p className="text-slate-400 text-lg max-w-xl mx-auto mb-8">
-          Your trusted printing & graphics partner for over 20 years. Quality you can count on,
-          every single time.
+          Kathmandu&apos;s trusted shop for flex print, banner printing, and graphics for over 20
+          years. Quality you can count on, every single time.
         </p>
 
         <div className="flex gap-4 justify-center">
