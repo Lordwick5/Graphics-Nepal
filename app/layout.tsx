@@ -13,22 +13,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://graphicsnepal.com.np";
+const SITE_URL = "https://www.graphicsnepal.com.np";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Graphics Nepal | Printing & Graphics Shop in Kathmandu, Nepal",
+    default: "Graphics Nepal | Flex Print, Banner & Printing Shop in Kathmandu",
     template: "%s | Graphics Nepal",
   },
   description:
-    "Graphics Nepal (formerly Nepal Art) has been Kathmandu's trusted printing & graphics shop since 2000 — business cards, banners, stamps, ID cards, stickers, and more from our Tripureshwor store.",
+    "Graphics Nepal (formerly Nepal Art) is Kathmandu's trusted flex print & banner printing shop since 2000 — plus business cards, stamps, ID cards, stickers, and more from our Tripureshwor store.",
   keywords: [
+    "flex print Kathmandu",
+    "flex printing Kathmandu",
+    "flex banner Kathmandu",
+    "banner printing Kathmandu",
+    "vinyl banner printing Nepal",
     "printing Kathmandu",
     "graphics Nepal",
     "Tripureshwor printing",
     "business card printing Nepal",
-    "banner printing Kathmandu",
     "stamp making Nepal",
     "ID card printing Nepal",
     "sticker printing Nepal",
@@ -42,9 +46,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "Graphics Nepal",
-    title: "Graphics Nepal | Printing & Graphics Shop in Kathmandu, Nepal",
+    title: "Graphics Nepal | Flex Print, Banner & Printing Shop in Kathmandu",
     description:
-      "Trusted printing & graphics partner in Kathmandu since 2000. Business cards, banners, stamps, ID cards, stickers, and more.",
+      "Trusted flex print & banner printing partner in Kathmandu since 2000. Business cards, stamps, ID cards, stickers, and more.",
     images: [
       {
         url: "/visiting_card.jpg",
@@ -108,6 +112,23 @@ const localBusinessJsonLd = {
   ],
   priceRange: "$$",
   foundingDate: "2000",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Printing & Graphics Services",
+    itemListElement: [
+      "Flex Print & Banner Printing",
+      "Business Card Printing",
+      "Stamp Making",
+      "ID Card & Strap Printing",
+      "Vinyl Sticker Printing",
+      "LED Light Box & Sign Boards",
+      "Canvas Printing",
+      "DTF T-shirt Printing",
+    ].map((name) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name },
+    })),
+  },
   sameAs: [
     "https://www.facebook.com/profile.php?id=61589712207794",
     "https://www.instagram.com/graphics_nepal58",

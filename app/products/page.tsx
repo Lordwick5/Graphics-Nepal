@@ -2,9 +2,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Products & Services",
+  title: "Flex Print, Banners & 24+ Printing Services",
   description:
-    "Browse 24+ printing & graphics products from Graphics Nepal: business cards, banners, stamps, ID cards, stickers, canvas prints, LED sign boards, and more.",
+    "Flex print & banner printing in Kathmandu, plus business cards, stamps, ID cards, stickers, canvas prints, LED sign boards, and more — 24+ printing & graphics products from Graphics Nepal.",
   alternates: { canonical: "/products" },
 };
 
@@ -23,9 +23,9 @@ const products = [
   },
   {
     id: 3,
-    name: "Flex/Banner Print",
+    name: "Flex Print & Banner Printing",
     image: "/flex_print.jpg",
-    desc: "High-impact custom banners for both business promotion and personal events.",
+    desc: "High-quality digital flex print and vinyl banner printing in Kathmandu — shop hoardings, event banners, and hanging displays in any size.",
   },
   {
     id: 4,
@@ -166,6 +166,12 @@ export default function Products() {
 
       {/* Products Grid */}
       <div className="max-w-5xl mx-auto px-6 py-16">
+        <p className="text-slate-600 leading-relaxed mb-10 max-w-3xl">
+          From <strong>flex print and banner printing</strong> to business cards, stamps, ID
+          cards, and stickers, Graphics Nepal in Tripureshwor, Kathmandu is a one-stop print shop
+          for businesses and individuals. Browse our full range of printing & graphics services
+          below, or get in touch for a custom quote.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {products.map((product) => (
             <div
